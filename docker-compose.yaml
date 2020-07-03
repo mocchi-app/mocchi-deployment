@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  postgres_brand:
+    image: postgres:12.3
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_BRAND_USER:-mocchi-brand}
+      POSTGRES_PASSWORD: ${POSTGRES_BRAND_PASSWORD:-mocchi-brand}
+      POSTGRES_DB: ${POSTGRES_BRAND_DB:-mocchi-brand}
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
+  brand_be:
+    image: docker.pkg.github.com/mocchi-app/brand-be/brand-be:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      API_KEY: ${API_KEY}
+      API_SECRET_KEY: ${API_SECRET_KEY}
+      STRIPE_API_KEY: ${STRIPE_API_KEY}
