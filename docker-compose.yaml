@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_BRAND_PASSWORD:-mocchi-brand}
       POSTGRES_DB: ${POSTGRES_BRAND_DB:-mocchi-brand}
     volumes:
-      - /var/lib/postgresql/data:/var/lib/postgresql/data
+      - /root/brand/data:/var/lib/postgresql/data
   brand-be:
     image: docker.pkg.github.com/mocchi-app/brand-be/brand-be:latest
     restart: always
