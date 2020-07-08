@@ -54,4 +54,9 @@ services:
   brand-fe:
     image: docker.pkg.github.com/mocchi-app/brand-fe/brand-fe:latest
     ports:
-    - 7070:3000
+      - 7070:3000
+
+  affiliate-fe:
+    image: docker.pkg.github.com/mocchi-app/affiliate-fe/affiliate-fe:latest
+    ports:
+      - 7071:3000
