@@ -24,7 +24,8 @@ services:
       DATABASE_URL: postgresql://postgres-brand:5432/${POSTGRES_BRAND_DB}
       JDBC_DATABASE_USERNAME: ${POSTGRES_BRAND_USER}
       JDBC_DATABASE_PASSWORD: ${POSTGRES_BRAND_PASSWORD}
-
+      SERVER_REDIRECT_URL: ${SERVER_REDIRECT_URL}
+      FRONTEND_REDIRECT_URL: ${FRONTEND_REDIRECT_URL}
 
   postgres-affiliate:
     image: postgres:12.3
@@ -35,8 +36,6 @@ services:
       POSTGRES_USER: ${POSTGRES_AFFILIATE_USER}
       POSTGRES_PASSWORD: ${POSTGRES_AFFILIATE_PASSWORD}
       POSTGRES_DB: ${POSTGRES_AFFILIATE_DB}
-      SERVER_REDIRECT_URL: ${SERVER_REDIRECT_URL}
-      FRONTEND_REDIRECT_URL: ${FRONTEND_REDIRECT_URL}
     volumes:
       - /root/affiliate/data:/var/lib/postgresql/data
   affiliate-be:
