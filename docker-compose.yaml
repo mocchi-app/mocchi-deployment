@@ -35,6 +35,8 @@ services:
       POSTGRES_USER: ${POSTGRES_AFFILIATE_USER}
       POSTGRES_PASSWORD: ${POSTGRES_AFFILIATE_PASSWORD}
       POSTGRES_DB: ${POSTGRES_AFFILIATE_DB}
+      SERVER_REDIRECT_URL: ${SERVER_REDIRECT_URL}
+      FRONTEND_REDIRECT_URL: ${FRONTEND_REDIRECT_URL}
     volumes:
       - /root/affiliate/data:/var/lib/postgresql/data
   affiliate-be:
