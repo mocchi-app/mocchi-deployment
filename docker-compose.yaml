@@ -70,3 +70,13 @@ services:
     image: docker.pkg.github.com/mocchi-app/articles-frontend-giftjet/articles-frontend-giftjet:latest
     ports:
       - 6061:3000
+
+  postgres-articles-strapi-giftjet:
+    image: postgres:12.3
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_GIFTJET_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_GIFTJET_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_GIFTJET_DB}
+    volumes:
+      - /root/giftjet/data:/var/lib/postgresql/data
