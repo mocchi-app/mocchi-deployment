@@ -60,3 +60,13 @@ services:
     image: docker.pkg.github.com/mocchi-app/affiliate-fe/affiliate-fe:latest
     ports:
       - 7071:3000
+
+  articles-strapi-giftjet:
+    image: docker.pkg.github.com/mocchi-app/articles-strapi-giftjet/articles-strapi-giftjet:latest
+    ports:
+      - 6060:1337
+
+  articles-frontend-giftjet:
+    image: docker.pkg.github.com/mocchi-app/articles-frontend-giftjet/articles-frontend-giftjet:latest
+    ports:
+      - 6061:3000
