@@ -50,6 +50,8 @@ services:
       DATABASE_URL: postgresql://postgres-affiliate:5432/${POSTGRES_AFFILIATE_DB}
       JDBC_DATABASE_USERNAME: ${POSTGRES_AFFILIATE_USER}
       JDBC_DATABASE_PASSWORD: ${POSTGRES_AFFILIATE_PASSWORD}
+      STRIPE_API_KEY: ${STRIPE_API_KEY}
+      STRIPE_API_CLIENT_ID: ${STRIPE_API_CLIENT_ID}
 
   brand-fe:
     image: docker.pkg.github.com/mocchi-app/brand-fe/brand-fe:latest
